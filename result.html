@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #43cea2, #185a9d);
+            color: white;
+            text-align: center;
+        }
+        .card {
+            margin: 100px auto;
+            padding: 20px;
+            width: 400px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>🎯 Predicted Role</h2>
+    <h1>{{ role }}</h1>
+
+    <h2>📊 Score: {{ score }}/100</h2>
+
+    <h3>❌ Missing Skills:</h3>
+    <ul>
+        {% for skill in missing %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/" style="color:white;">⬅ Back</a>
+</div>
+
+</body>
+</html>
